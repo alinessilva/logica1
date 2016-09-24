@@ -1,4 +1,4 @@
-<meta charset="latin">
+<meta charset="utf-8">
 
 <script>
     function pulaLinha() {
@@ -14,10 +14,15 @@
 	var temCarteira = prompt("Tem carteira? Responda S ou N");
 
 	if (idade < 18){
-		mostra ("Não pode dirigir!");
+		mostra("Não pode dirigir!");
 	}
 
 	if (idade >= 18 && temCarteira == "N") {
-		mostra ("Não pode dirigir ainda!");
+		mostra("Não pode dirigir ainda!");
 	}
+	
+	if (idade >= 18 && temCarteira == "S") {
+		mostra("Agora você pode dirigir!");
+	}
+
 </script>
