@@ -13,16 +13,18 @@
 	var idade = parseInt(prompt("Qual é sua idade"));
 	var temCarteira = prompt("Tem carteira? Responda S ou N");
 
-	if (idade < 18){
-		mostra("Não pode dirigir!");
-	}
-
-	if (idade >= 18 && temCarteira == "N") {
-		mostra("Não pode dirigir ainda!");
-	}
+	// usando do else não é preciso testar essascondições	
+	//if (idade < 18){
+	//	mostra("Não pode dirigir!");
+	//}
+	//if (idade >= 18 && temCarteira == "N" || temCarteira == "n") {
+	//	mostra("Não pode dirigir!");
+	//}
 	
-	if (idade >= 18 && temCarteira == "S") {
-		mostra("Agora você pode dirigir!");
+	if (idade >= 18 && temCarteira == "S" || temCarteira == "s") {
+		mostra("Você pode dirigir!");
+	} else {
+		mostra("Não pode dirigir!")
 	}
 
 </script>
