@@ -1,0 +1,23 @@
+<canvas id="tela" width="600" height="400"></canvas>
+
+<script>
+
+// busca uma caixa de texto
+var tela = document.getElementById("tela");
+
+// a partir dele conseguimos desenhar coisas como um pincel
+var c = tela.getContext("2d")
+
+
+c.fillStyle = "green";
+c.fillRect(0,0,200,400);
+
+// O ponto 0,0 é o canto superior esquerdo, 200 de largura e 400 de altura
+// A função fillRect recebe quatro números para pintar um retângulo. 
+// Os dois primeiros são a posição X,Y. Os outros dois são a largura e a altura do retângulo. 
+// Nesse caso, estamos pintando um retângulo na posição 0,0 de 200 de largura por 400 de altura.
+
+c.fillStyle = "red";
+c.fillRect(400,0,200,400);
+
+</script>

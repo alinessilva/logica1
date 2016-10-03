@@ -1,0 +1,30 @@
+<canvas id="tela" width="600" height="400"></canvas>
+
+<script>
+
+// busca uma caixa de texto
+var tela = document.getElementById("tela");
+
+// a partir dele conseguimos desenhar coisas como um pincel
+var c = tela.getContext("2d")
+
+
+// Triangulo: precisamos traçar três lados. 
+// Pegamos nosso pincel começando do ponto 300,200, que representa o meio da bandeira. 
+// Traçamos desse ponto até o inferior esquerdo, que é 200,400. 
+// Depois traçamos a base do triângulo, movendo o pincel até o ponto 400,400. 
+// Por último, fechamos o nosso polígono (no caso um triângulo), retornando ao ponto inicial do traçado. 
+// Além disso, pedimos para que todo o polígono seja preenchido
+
+var tela = document.getElementById("tela");
+var c = tela.getContext("2d");
+
+c.fillStyle = "gray";
+c.beginPath();
+c.moveTo(300,100);
+c.lineTo(100,400);
+c.lineTo(600,600);
+c.fill();
+
+
+</script>

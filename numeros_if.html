@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<script>
+
+//Que tal uma dificuldade um pouco maior? 
+//Imprima todos os números entre 30 e 40 (inclusive 30 e 40, claro!), 
+//porém os números 33 e 37 não devem ser impressos! No final escreva a palavra "FIM". 
+//Use um while para essa tarefa. DICA: o if pode ajudá-lo!
+
+
+
+	function mostra(frase){
+
+		document.write(frase + "<br/>");
+
+	}
+	
+	var contador = 30;
+	
+	while(contador >= 30 && contador <=40) {
+// "se é diferente de 33 E também é diferente de 37, .." ao executar o laço, esses valores não serão impressos.
+		if(contador != 33 && contador !=37) {
+			mostra(contador);
+		}
+	
+	contador = contador + 1;
+	}
+	
+	mostra("FIM");
+
+</script>

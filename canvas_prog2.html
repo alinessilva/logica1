@@ -1,0 +1,51 @@
+<canvas id="tela" width="600" height="400"></canvas>
+
+<script>
+
+// busca uma caixa de texto
+var tela = document.getElementById("tela");
+
+// a partir dele conseguimos desenhar coisas como um pincel
+var c = tela.getContext("2d")
+
+
+c.fillStyle = "green";
+c.fillRect(0,0,200,400);
+
+// O ponto 0,0 é o canto superior esquerdo, 200 de largura e 400 de altura
+// A função fillRect recebe quatro números para pintar um retângulo. 
+// Os dois primeiros são a posição X,Y. Os outros dois são a largura e a altura do retângulo. 
+// Nesse caso, estamos pintando um retângulo na posição 0,0 de 200 de largura por 400 de altura.
+
+c.fillStyle = "red";
+c.fillRect(400,0,200,400);
+
+
+// Triangulo: precisamos traçar três lados. 
+// Pegamos nosso pincel começando do ponto 300,200, que representa o meio da bandeira. 
+// Traçamos desse ponto até o inferior esquerdo, que é 200,400. 
+// Depois traçamos a base do triângulo, movendo o pincel até o ponto 400,400. 
+// Por último, fechamos o nosso polígono (no caso um triângulo), retornando ao ponto inicial do traçado. 
+// Além disso, pedimos para que todo o polígono seja preenchido
+
+c.fillStyle="gray";
+c.beginPath();
+c.moveTo(300, 200);
+c.lineTo(200, 400);
+c.lineTo(400, 400);
+c.fill();
+
+
+// Função arc, para circunferências. 
+// São 5: as coordenadas X e Y, o raio, o ângulo inicial e o ângulo final, ambos em radianos. 
+// Ele precisa dos ângulos iniciais e finais porque ele também serve para desenhar apenas um pedaço do círculos. 
+// Vamos usar de 0 até duas vezes 3.14, que é o valor do PI, representando a circunferência inteira:
+// O valor de 3.14 é o PI. PI pode ser substituído por Math.PI,
+
+c.fillStyle="blue";
+c.beginPath();
+c.arc(300, 200, 50, 0, 2*Math.PI);
+c.fill();
+
+
+</script>

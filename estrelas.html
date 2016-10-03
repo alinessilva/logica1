@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha(){
+
+		document.write("<br>");
+	}
+
+	function mostra(frase){
+
+		document.write(frase);
+		pulaLinha();
+	}
+
+	for(var linha = 1; linha <=3; linha++){
+		
+		for (var coluna = 1; coluna <=10; coluna++) {
+			document.write("*");	
+		}
+		pulaLinha();
+		
+		
+	}
+	//Repare que declaramos duas variáveis. A variável linha para o primeiro loop e a variável 
+	//coluna para o segundo loop. Cada vez que nosso loop das colunas termina, ele pula linha e
+	//começa a execução da próxima iteração do loop que cuida das colunas! Exatamente como queríamos. 
+	//Dizemos aqui que temos um loop encadeado em outro. Num termo mais técnico, dizemos que temos loops aninhados!
+	
+	
+	
+//	for(var linha = 1; linha <=3; linha++){
+//		mostra("**********");	
+	
+</script>

@@ -2,26 +2,22 @@
 
 <script>
 
-	function pulaLinha(){
-
-		document.write("<br><br>");
-	}
-
 	function mostra(frase){
 
-		document.write(frase);
-		pulaLinha();
+		document.write(frase + "<br/>");
+		
 	}
 	
-	var limite = parseInt(prompt("Entre com a data limite"));
+//	var limite = parseInt(prompt("Entre com a data limite"));
+
 	var anoCopa = 1930;
 	
-	while(anoCopa <= limite) {
+	while(anoCopa <= 2014) {
 	
 	mostra("Teve copa em " + anoCopa);
 	anoCopa = anoCopa + 4;
 	}
 	
-	mostra("FIM");
+	mostra("Esses foram os anos que tiveram copa até 2014!");
 	
 </script>

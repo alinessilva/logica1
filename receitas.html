@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+<h1>Receitas do Yan</h1>
+
+<script>
+
+// esse programa não pode aceitar ingredientes repetidos 
+
+    var ingredientes = [];
+
+    var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
+
+    var contador = 1;
+
+    while( contador <= quantidade) {
+
+        var ingrediente = prompt("Informe o ingrediente " + contador);
+        
+        var existe = false;
+        
+// Esse for verificar se o ingrediente já existe na lista            
+            for (var posicao = 0; posicao <ingredientes.length; posicao++){
+                if (ingredientes[posicao] == ingrediente){
+                    existe = true;
+// Esse break "quebra" o for e não o while.                    
+                    break;
+                }
+            }
+        
+        if(existe==false){
+            ingredientes.push(ingrediente);
+// Só podemos incrementar a variável contador se o ingrediente não existir. 
+//Se ele existir, precisamos perguntar novamente ao usuário.    
+            contador++;    
+        }
+    }
+
+    console.log(ingredientes);
+</script>
